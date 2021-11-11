@@ -17,15 +17,28 @@ int sum(int n);
  *    int n
  *       The top limit of the sum.
  *
- * Postconditions:
+ * Return:
  *    All integers from 1 to n are summed and returned.
+ */
+
+int product(int n);
+/* Description: This function calculates the product of all
+ * integer values from 1 to n. This product is then returned.
+ *
+ * Parameters:
+ *    int n
+ *       The upper limit of the product calculation.
+ *
+ * Return:
+ *    All integers from 1 to n are multiplied and returned.
  */
 
 int main() {
   int n;
   cout << "Enter a number: ";
   cin >> n;
-  cout << sum(n) << endl;
+  cout << "Sum: " << sum(n) << endl;
+  cout << "Product: " << product(n) << endl; 
   return 0;
 }
 
@@ -37,3 +50,10 @@ int sum(int n) {
   return totalSum;
 }
     
+int product(int n) {
+  int totalProduct = 1;
+  for (int i = 1; i <= n; i++) {
+    totalProduct *= i;
+  }
+  return totalProduct;
+}
